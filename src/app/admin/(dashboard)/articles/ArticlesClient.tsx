@@ -133,8 +133,8 @@ export function ArticlesClient({ initialArticles }: { initialArticles: any[] }) 
       <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50/50">
         <h2 className="font-semibold text-gray-800">Daftar Artikel</h2>
         <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if (!open) resetForm(); }}>
-          <DialogTrigger asChild>
-            <Button className="bg-brand-primary text-white"><Plus className="w-4 h-4 mr-2" /> Tulis Artikel</Button>
+          <DialogTrigger render={<Button className="bg-brand-primary text-white" />}>
+            <Plus className="w-4 h-4 mr-2" /> Tulis Artikel
           </DialogTrigger>
           <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>

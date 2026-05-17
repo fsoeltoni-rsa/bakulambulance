@@ -109,8 +109,8 @@ export function ProductsClient({ initialProducts }: { initialProducts: any[] }) 
       <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50/50">
         <h2 className="font-semibold text-gray-800">Daftar Produk</h2>
         <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if (!open) resetForm(); }}>
-          <DialogTrigger asChild>
-            <Button className="bg-brand-primary text-white"><Plus className="w-4 h-4 mr-2" /> Tambah Produk</Button>
+          <DialogTrigger render={<Button className="bg-brand-primary text-white" />}>
+            <Plus className="w-4 h-4 mr-2" /> Tambah Produk
           </DialogTrigger>
           <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>

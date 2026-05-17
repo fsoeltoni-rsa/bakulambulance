@@ -76,8 +76,8 @@ export function GalleryClient({ initialGallery }: { initialGallery: any[] }) {
     <div className="space-y-6">
       <div className="flex justify-end">
         <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if (!open) resetForm(); }}>
-          <DialogTrigger asChild>
-            <Button className="bg-brand-primary text-white">Upload Foto Baru</Button>
+          <DialogTrigger render={<Button className="bg-brand-primary text-white" />}>
+            Upload Foto Baru
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
